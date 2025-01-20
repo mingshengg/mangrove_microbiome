@@ -137,7 +137,7 @@ rbind(FWD.ForwardReads = sapply(FWD.orients, primerHits, fn = fnFs.cut[[10]]),
 # Filter and trim ####
 
 # cut fwd reads at 270 and rev reads at 200
-out <- filterAndTrim(fnFs, filtFs, fnRs, filtRs, truncLen=c(270,200),
+out <- filterAndTrim(fnFs.cut, filtFs, fnRs.cut, filtRs, truncLen=c(270,200),
                      maxN=0, maxEE=c(1,1), truncQ=2, rm.phix=TRUE,
                      compress=TRUE, multithread=FALSE,verbose = TRUE)
 
